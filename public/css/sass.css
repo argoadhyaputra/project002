@@ -1,0 +1,411 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #f3ebcf;
+  height: 3000px;
+}
+
+.miniHeader {
+  background: #1d1d1d;
+}
+
+.miniHeader i {
+  color: white;
+}
+
+.miniHeader .container .arg-dropdown {
+  color: white;
+  height: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.miniHeader .container .arg-dropdown h5 {
+  color: white;
+  font-size: 16px;
+}
+
+.miniHeader .container .arg-dropdown.shows {
+  height: 100px;
+}
+
+.miniHeader .container .arg-dropdown .arg-dropdown-menu {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  visibility: hidden;
+}
+
+.miniHeader .container .arg-dropdown .arg-dropdown-menu.show {
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 100px;
+  visibility: visible;
+}
+
+.miniHeader .container .arg-dropdown .arg-dropdown-menu li {
+  list-style: none;
+}
+
+.miniHeader .container .arg-dropdown .arg-dropdown-menu li a {
+  color: white;
+}
+
+.headerContainer .header {
+  padding-top: 22px !important;
+  padding-bottom: 15px !important;
+}
+
+.headerContainer .header .logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerContainer .header .logo span {
+  font-size: 19px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+
+.headerContainer .header .navbar li a {
+  padding: 8px;
+  color: black;
+  font-weight: 600;
+}
+
+.headerContainer .header .registerButton {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerContainer .header .registerButton a {
+  background: #181818;
+  padding: 8px 40px;
+  color: white;
+}
+
+.headerContainer .header .registerButton a:hover {
+  background: black;
+}
+
+.headerContainer .strip {
+  height: 2px;
+  background: #818181;
+}
+
+.headerContainer .jumbotron {
+  margin-top: 40px;
+}
+
+.headerContainer .jumbotron .jumbotronImage {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.headerContainer .jumbotron .jumbotronImage .img2 {
+  -webkit-transform: translateX(-100px) translateY(40px);
+          transform: translateX(-100px) translateY(40px);
+  z-index: -1;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title h3 {
+  font-size: 88px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0px 0px 10px #f3ebcf;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title .d-flex .strip {
+  height: 4px;
+  background: #1b1b1b;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title .d-flex i {
+  -webkit-transform: scale(3.5);
+          transform: scale(3.5);
+}
+
+.headerContainer .jumbotron .jumbotronTitle .aboutLittle p {
+  font-size: 15.5px;
+  line-height: 18px;
+  color: #818181;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .aboutLittle .items {
+  margin-top: 10px;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .aboutLittle .items h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
+.contentOne {
+  margin-top: 80px;
+}
+
+.contentOne .strip {
+  height: 2px;
+  background: grey;
+}
+
+.contentOne .container .contentLeft .titleContent h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.contentOne .container .contentLeft .titleContent .strip {
+  height: 2px;
+  background: grey;
+}
+
+.contentOne .container .contentLeft .titleContent a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  font-weight: bold;
+  font-size: 19px;
+  text-decoration: underline;
+}
+
+.contentOne .container .contentLeft .contentIcons {
+  margin-top: 145px;
+  -webkit-transform: scale(3.6);
+          transform: scale(3.6);
+}
+
+.contentOne .container .contentRight .col1 .column {
+  background: #e092b9;
+  height: 340px !important;
+}
+
+.contentOne .container .contentRight .col2 .column {
+  background: #5da198 !important;
+  height: 280px !important;
+}
+
+.contentOne .container .contentRight .col3 .column {
+  background: #be5959 !important;
+  height: 310px !important;
+}
+
+.gyramanSteps {
+  margin-top: 50px;
+}
+
+.gyramanSteps .strip {
+  height: 1px;
+  background: black;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .titleContent h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .titleContent .strip {
+  height: 2px;
+  background: grey;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .titleContent a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  font-weight: bold;
+  font-size: 19px;
+  text-decoration: underline;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .contentIcons {
+  margin-top: 105px;
+  -webkit-transform: scale(3.6);
+          transform: scale(3.6);
+}
+
+.gyramanSteps .conztainer .gyramanRight .col {
+  padding: 30px;
+  border-width: 0px 0px 1px 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.gyramanSteps .conztainer .gyramanRight .col h2 {
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.gyramanPlatform {
+  margin-top: 40px;
+}
+
+.gyramanPlatform .container .up h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.gyramanPlatform .container .up p {
+  color: grey;
+}
+
+.gyramanPlatform .container .down {
+  margin-top: 30px;
+}
+
+.gyramanPlatform .container .down .blue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.gyramanPlatform .container .down .blue div {
+  padding: 23px 10px;
+  width: 50%;
+  background: #67aef0;
+}
+
+.gyramanPlatform .container .down .grey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.gyramanPlatform .container .down .grey div {
+  padding: 23px 10px;
+  width: 70%;
+  background: grey;
+}
+
+.gyramanPlatform .container .down .pink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.gyramanPlatform .container .down .pink div {
+  padding: 23px 10px;
+  width: 90%;
+  background: #f3aed4;
+}
+
+.gyramanPlatform .web a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.gyramanPlatform .strip {
+  height: 2px;
+  background: grey;
+}
+
+.footer {
+  padding: 80px 50px;
+}
+
+.footer .container .footerLeft {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .container .footerLeft .top {
+  height: 100%;
+}
+
+.footer .container .footerLeft .top h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 38px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.footer .container .footerLeft .top a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.footer .container .footerLeft .bot h2 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.footer .container .footerRight p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: gray;
+}
+
+.footer .container .footerRight .formx form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .container .footerRight .formx form input {
+  padding: 10px;
+  border: 1px solid #d15268;
+}
+
+.footer .container .footerRight .formx form input:focus {
+  border: none !important;
+}
+
+.footer .container .footerRight .formx form button {
+  padding: 10px;
+  border: none;
+  background: #d15268;
+  font-weight: 500;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer .container .footerRight .footerLink {
+  margin-top: 20px;
+}
+
+.footer .container .footerRight .footerLink ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: grey;
+  line-height: 35px;
+}
+/*# sourceMappingURL=sass.css.map */

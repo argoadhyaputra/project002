@@ -1,0 +1,376 @@
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+body {
+    background:rgb(243, 235, 207);
+    height: 3000px;
+}
+
+@mixin strip($color, $size) {
+    height: $size;
+    background: $color;
+}
+
+@mixin flexContent ($color, $height) {
+    background: $color !important;
+    height: $height !important;
+}
+
+$white : white;
+$black : black;
+.miniHeader {
+    i {
+        color: $white;
+    }
+    background: rgb(29, 29, 29);
+    & .container {
+        & .arg-dropdown {
+            color:$white;
+            & h5 {
+                color: $white;
+                font-size:16px;
+            }
+            height: 30px;
+            transition: 1s;
+            &.shows {
+                height: 100px;
+            }
+
+            & .arg-dropdown-menu {
+                height:0;
+                overflow: hidden;
+                transition:all .5s ease;
+                visibility: hidden;
+                // background:red;
+                &.show {
+                    transition:1s;
+                    height: 100px;
+                    visibility: visible ;
+                }
+                & li {
+                    list-style: none;
+                    & a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// header
+.headerContainer {
+    & .header {
+        padding-top: 22px !important;
+        padding-bottom: 15px !important;
+        & .logo {
+            align-items: center;
+            span {
+                font-size: 19px;
+                align-items: center;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: bolder;
+            }
+        }
+
+        & .navbar {
+            & li a {
+                padding: 8px;
+                color: $black;
+                font-weight: 600;
+            }
+        }
+
+        & .registerButton {
+            align-items: center;
+            
+            & a {
+                background: rgb(24, 24, 24);
+                padding: 8px 40px;
+                color: $white;
+                &:hover {
+                    background:rgb(0, 0, 0);
+                }
+            }
+        }
+    }
+
+
+    & .strip {
+        @include strip(rgb(129, 129, 129), 2px)
+    }
+
+
+    & .jumbotron {
+        margin-top: 40px;
+        & .jumbotronImage {
+            z-index: -1;
+            position: absolute;
+            right: 0;
+            justify-content: end;
+            & .img2 {
+                transform: translateX(-100px) translateY(40px);
+                z-index: -1;
+            }
+        }
+
+        & .jumbotronTitle {
+            & .title {
+                & h3 {
+                    font-size: 88px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    text-shadow: 0px 0px 10px rgb(243, 235, 207);
+                }
+                & .d-flex {
+                    & .strip {
+                        @include strip(rgb(27, 27, 27), 4px);
+                    }
+                    & i {
+                        transform: scale(3.5);
+                    }
+                }
+            }
+
+            & .aboutLittle {
+                & p {
+                    font-size: 15.5px;
+                    line-height: 18px ;
+                    color: rgb(129, 129, 129);
+                }
+                & .items {
+                    margin-top: 10px;
+                    h3 {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contentOne {
+    margin-top: 80px;
+    & .strip {
+        @include strip(grey, 2px );
+    }
+    & .container {
+        & .contentLeft {
+            & .titleContent {
+                h2 {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 42px;
+                    font-weight: bold;
+                }
+                & .strip {
+                    @include strip(grey, 2px);
+                }
+                & a {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 19px;
+                    text-decoration: underline;
+                }
+            }
+            & .contentIcons {
+                margin-top: 145px;
+                transform: scale(3.6);
+            }
+        }
+
+        & .contentRight {
+            & .col1 .column  {
+                // @include flexContent(rgb(224, 146, 185), 340px );
+                background:rgb(224, 146, 185);height: 340px !important;
+            }
+            & .col2 .column {
+                @include flexContent(rgb(93, 161, 152), 280px );
+            }
+            & .col3 .column {
+                @include flexContent(rgb(190, 89, 89), 310px );
+            }
+        }
+
+    }
+
+}
+
+.gyramanSteps {
+    margin-top: 50px;
+    & .strip {
+        @include strip($black, 1px)
+    }
+    & .conztainer{
+        & .gyramanLeft {
+            & .titleContent {
+                h2 {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 42px;
+                    font-weight: bold;
+                }
+                & .strip {
+                    @include strip(grey, 2px);
+                }
+                & a {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 19px;
+                    text-decoration: underline;
+                }
+            }
+            & .contentIcons {
+                margin-top: 105px;
+                transform: scale(3.6);
+            }
+        }
+        & .gyramanRight {
+            & .col {
+                padding: 30px;
+                border-width: 0px 0px 1px 1px;
+                border-color: black;
+                border-style: solid;
+                // border: 1px solid red;
+                & h2 {
+                    font-size: 22px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.gyramanPlatform {
+    margin-top: 40px;
+    & .container {
+        & .up {
+            & h2 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+                font-size: 38px;
+            }
+            & p {
+                color: grey;
+            }
+        }
+        & .down {
+            margin-top: 30px;
+            & .blue {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                & div {
+                    padding: 23px 10px;
+                    width: 50%;
+                    background: rgb(103, 174, 240);
+                }
+            }
+            & .grey {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                & div {
+                    padding: 23px 10px;
+                    width: 70%;
+                    background: grey;
+                }
+            }
+            & .pink {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                & div {
+                    padding: 23px 10px;
+                    width: 90%;
+                    background: rgb(243, 174, 212);
+                }
+            }
+        }
+    }
+    & .web {
+        & a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+    & .strip {
+        @include strip(grey, 2px)
+    }
+}
+
+.footer {
+    padding: 80px 50px;
+    & .container {
+        & .footerLeft {
+            // display: flex;
+            flex-direction: column;
+            & .top {
+                height: 100%;
+                & h2 {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 38px;
+                    font-weight: bold;
+                    padding-bottom: 50px;
+                }
+                & a {
+                    // padding-top: 130px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                }
+            }
+            & .bot {
+                & h2 {
+                    font-size: 18px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                }
+            }
+        }
+        & .footerRight {
+            & p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                color: gray;
+            }
+            & .formx {
+                & form {
+                    display: flex;
+                    & input {
+                        padding: 10px;
+                        border: 1px solid rgb(209, 82, 104);
+                        &:focus {
+                            border: none !important;
+                        }
+                    }
+                    & button {
+                        padding: 10px;
+                        border: none;
+                        background: rgb(209, 82, 104);
+                        font-weight: 500;
+                        color: $white;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+            & .footerLink {
+                margin-top: 20px;
+                & ul {
+                    & li {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: 400;
+                        color: grey;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
