@@ -7,6 +7,7 @@ li {
 body {
     background:rgb(243, 235, 207);
     height: 3000px;
+    overflow-x: hidden;
 }
 
 @mixin strip($color, $size) {
@@ -26,6 +27,7 @@ $black : black;
         color: $white;
     }
     background: rgb(29, 29, 29);
+    width: 100% !important;
     & .container {
         & .arg-dropdown {
             color:$white;
@@ -177,10 +179,10 @@ $black : black;
                     text-decoration: underline;
                 }
             }
-            & .contentIcons {
-                margin-top: 145px;
-                transform: scale(3.6);
-            }
+        }
+        & .contentIcons {
+            margin-top: 145px;
+            transform: scale(3.6);
         }
 
         & .contentRight {

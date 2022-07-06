@@ -9,10 +9,12 @@ li {
 body {
   background: #f3ebcf;
   height: 3000px;
+  overflow-x: hidden;
 }
 
 .miniHeader {
   background: #1d1d1d;
+  width: 100% !important;
 }
 
 .miniHeader i {
@@ -183,7 +185,7 @@ body {
   text-decoration: underline;
 }
 
-.contentOne .container .contentLeft .contentIcons {
+.contentOne .container .contentIcons {
   margin-top: 145px;
   -webkit-transform: scale(3.6);
           transform: scale(3.6);
