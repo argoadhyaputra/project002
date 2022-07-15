@@ -8,56 +8,62 @@ li {
 
 body {
   background: #f3ebcf;
-  height: 3000px;
   overflow-x: hidden;
 }
 
-.miniHeader {
-  background: #1d1d1d;
-  width: 100% !important;
-}
-
-.miniHeader i {
-  color: white;
-}
-
-.miniHeader .container .arg-dropdown {
-  color: white;
-  height: 30px;
+.rotate {
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.miniHeader .container .arg-dropdown h5 {
+.miniHeader {
+  width: 100% !important;
+  background: #1d1d1d;
+}
+
+.miniHeader .container .arg-dropdown {
+  height: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
   color: white;
-  font-size: 16px;
 }
 
-.miniHeader .container .arg-dropdown.shows {
-  height: 100px;
-}
-
-.miniHeader .container .arg-dropdown .arg-dropdown-menu {
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-  visibility: hidden;
-}
-
-.miniHeader .container .arg-dropdown .arg-dropdown-menu.show {
+.miniHeader .container .arg-dropdown.show {
   -webkit-transition: 1s;
   transition: 1s;
   height: 100px;
   visibility: visible;
 }
 
-.miniHeader .container .arg-dropdown .arg-dropdown-menu li {
-  list-style: none;
+.miniHeader .container .arg-dropdown .arg-dropdown-menu {
+  opacity: 0;
+  height: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  visibility: hidden;
 }
 
-.miniHeader .container .arg-dropdown .arg-dropdown-menu li a {
+.miniHeader .container .arg-dropdown .arg-dropdown-menu a {
   color: white;
+}
+
+.miniHeader .container .arg-dropdown .arg-dropdown-menu.show {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 100px;
+  visibility: visible;
+}
+
+.miniHeader .container .arg-dropdown .d-flex .egg {
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .headerContainer .header {
@@ -132,29 +138,56 @@ body {
   text-shadow: 0px 0px 10px #f3ebcf;
 }
 
-.headerContainer .jumbotron .jumbotronTitle .title .d-flex .strip {
-  height: 4px;
-  background: #1b1b1b;
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown {
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.headerContainer .jumbotron .jumbotronTitle .title .d-flex i {
-  -webkit-transform: scale(3.5);
-          transform: scale(3.5);
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .arg-dropdown-menu {
+  opacity: 0;
+  height: 0;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  visibility: hidden;
 }
 
-.headerContainer .jumbotron .jumbotronTitle .aboutLittle p {
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .arg-dropdown-menu a {
+  color: white;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .arg-dropdown-menu.show {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 220px;
+  visibility: visible;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown p {
   font-size: 15.5px;
   line-height: 18px;
   color: #818181;
 }
 
-.headerContainer .jumbotron .jumbotronTitle .aboutLittle .items {
-  margin-top: 10px;
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .jumbs .strip {
+  height: 4px;
+  background: #1b1b1b;
 }
 
-.headerContainer .jumbotron .jumbotronTitle .aboutLittle .items h3 {
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .jumbs .items h3 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bolder;
+  font-size: 48px;
+}
+
+.headerContainer .jumbotron .jumbotronTitle .title .arg-dropdown .xxx {
+  font-size: 58px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .contentOne {
@@ -185,10 +218,54 @@ body {
   text-decoration: underline;
 }
 
-.contentOne .container .contentIcons {
-  margin-top: 145px;
-  -webkit-transform: scale(3.6);
-          transform: scale(3.6);
+.contentOne .container .contentLeft .arg-dropdown .contentIcons {
+  font-size: 48px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.contentOne .container .contentLeft .arg-dropdown .arg-dropdown-menu {
+  height: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.contentOne .container .contentLeft .arg-dropdown .arg-dropdown-menu a {
+  color: white;
+}
+
+.contentOne .container .contentLeft .arg-dropdown .arg-dropdown-menu.show {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 100px;
+  visibility: visible;
+}
+
+.contentOne .container .contentLeft .arg-dropdown .arg-dropdown-menu .col {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid black;
+}
+
+.contentOne .container .contentLeft .arg-dropdown .arg-dropdown-menu .col h4 {
+  font-size: 16px;
 }
 
 .contentOne .container .contentRight .col1 .column {
@@ -236,8 +313,49 @@ body {
 
 .gyramanSteps .conztainer .gyramanLeft .contentIcons {
   margin-top: 105px;
-  -webkit-transform: scale(3.6);
-          transform: scale(3.6);
+  font-size: 48px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .arg-dropdown .arg-dropdown-menu {
+  height: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.gyramanSteps .conztainer .gyramanLeft .arg-dropdown .arg-dropdown-menu.show {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 100px;
+  visibility: visible;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .arg-dropdown .arg-dropdown-menu .col {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid black;
+}
+
+.gyramanSteps .conztainer .gyramanLeft .arg-dropdown .arg-dropdown-menu .col h4 {
+  font-size: 16px;
 }
 
 .gyramanSteps .conztainer .gyramanRight .col {
