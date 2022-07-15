@@ -6,7 +6,7 @@ li {
 }
 body {
     background:rgb(243, 235, 207);
-    height: 3000px;
+    // height: 4000px;
     overflow-x: hidden;
 }
 
@@ -22,42 +22,52 @@ body {
 
 $white : white;
 $black : black;
-.miniHeader {
-    i {
-        color: $white;
-    }
-    background: rgb(29, 29, 29);
-    width: 100% !important;
-    & .container {
-        & .arg-dropdown {
-            color:$white;
-            & h5 {
-                color: $white;
-                font-size:16px;
-            }
-            height: 30px;
-            transition: 1s;
-            &.shows {
-                height: 100px;
-            }
 
-            & .arg-dropdown-menu {
-                height:0;
-                overflow: hidden;
-                transition:all .5s ease;
-                visibility: hidden;
-                // background:red;
-                &.show {
-                    transition:1s;
-                    height: 100px;
-                    visibility: visible ;
-                }
-                & li {
-                    list-style: none;
-                    & a {
-                        color: $white;
-                    }
-                }
+@mixin show($height) {
+    transition:1s;
+    height: $height;
+    visibility: visible ;
+}
+
+@mixin dropdownMixin($tx1,$tx2, $height) {
+    & .arg-dropdown-menu {
+        opacity: 0;
+        height:0;
+        transform: $tx1;
+        transition:all .5s ease;
+        visibility: hidden;
+        & a {
+            color: $white;
+        }
+        &.show {
+            transform: $tx2;
+            opacity: 1;
+            @include show($height) 
+        }
+    }
+}
+.rotate {
+    transform: rotate(180deg) !important;
+    transition: 1s;
+}
+
+
+.miniHeader {
+    width: 100% !important;
+    background: rgb(29, 29, 29);
+    color: white;
+    & .container .arg-dropdown{
+        height: 30px;
+        transition: 1s;
+        color: $white;
+         &.show {
+            @include show(100px);
+        }
+        @include dropdownMixin(translateX(-100px), translateX(0px), 100px);
+
+        & .d-flex {
+            & .egg {
+                transition: 1s;
             }
         }
     }
@@ -106,7 +116,6 @@ $black : black;
         @include strip(rgb(129, 129, 129), 2px)
     }
 
-
     & .jumbotron {
         margin-top: 40px;
         & .jumbotronImage {
@@ -127,33 +136,41 @@ $black : black;
                     font-family: Georgia, 'Times New Roman', Times, serif;
                     text-shadow: 0px 0px 10px rgb(243, 235, 207);
                 }
-                & .d-flex {
-                    & .strip {
-                        @include strip(rgb(27, 27, 27), 4px);
+                & .arg-dropdown {
+                    transition: 1s;
+                    @include dropdownMixin(translateY(-100px), translateY(0px), 220px);
+                    
+                    & p {
+                        font-size: 15.5px;
+                        line-height: 18px ;
+                        color: rgb(129, 129, 129);
+                        // color: red;
                     }
-                    & i {
-                        transform: scale(3.5);
+                    & .jumbs {
+                        & .strip {
+                            @include strip(rgb(27, 27, 27), 4px);
+                        }
+                        & .items {
+                            // background:red;
+                            & h3 {
+                                font-family: Georgia, 'Times New Roman', Times, serif;
+                                font-weight: bolder;
+                                font-size: 48px;
+                            }
+                        }
+                    }
+                    & .xxx {
+                        font-size: 58px;
+                        transition:1s;
                     }
                 }
             }
 
-            & .aboutLittle {
-                & p {
-                    font-size: 15.5px;
-                    line-height: 18px ;
-                    color: rgb(129, 129, 129);
-                }
-                & .items {
-                    margin-top: 10px;
-                    h3 {
-                        font-family: Georgia, 'Times New Roman', Times, serif;
-                        font-weight: bolder;
-                    }
-                }
-            }
         }
     }
 }
+
+
 
 .contentOne {
     margin-top: 80px;
@@ -179,11 +196,47 @@ $black : black;
                     text-decoration: underline;
                 }
             }
+            & .arg-dropdown {
+                & .contentIcons {
+                    font-size: 48px;
+                    transition: 1s;
+                }
+                & .arg-dropdown-menu {
+                    height: 0;
+                    transition: all 1s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-100px);
+                    & a {
+                        color: $white;
+                    }
+                    &.show {
+                        transform: translateY(0px);
+                        opacity: 1;
+                        @include show(100px);
+                    }
+                    & .col {
+                        width: 100px;
+                        height:100px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-right: 1px solid black;
+                        & h4 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
         }
-        & .contentIcons {
-            margin-top: 145px;
-            transform: scale(3.6);
-        }
+
+        
+        // & .contentIcons {
+        //     // margin-top: 145px;
+        //     // transform: scale(3.6);
+        //     font-size: 48px;
+        // }
 
         & .contentRight {
             & .col1 .column  {
@@ -227,8 +280,37 @@ $black : black;
                 }
             }
             & .contentIcons {
-                margin-top: 105px;
-                transform: scale(3.6);
+                margin-top: 55px;
+                font-size: 48px;
+                transition:1s;
+            }
+            
+            & .arg-dropdown {
+                & .arg-dropdown-menu {
+                    height: 0;
+                    transition: all 1s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-100px);
+                    
+                    &.show {
+                        transform: translateY(0px);
+                        opacity: 1;
+                        @include show(100px);
+                    }
+                    & .col {
+                        width: 100px;
+                        height:100px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-right: 1px solid black;
+                        & h4 {
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
         }
         & .gyramanRight {
