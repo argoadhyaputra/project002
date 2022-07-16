@@ -21,7 +21,6 @@ body {
 .miniHeader {
   width: 100% !important;
   background: #1d1d1d;
-<<<<<<< HEAD
   color: white;
 }
 
@@ -32,17 +31,6 @@ body {
   color: white;
 }
 
-=======
-}
-
-.miniHeader .container .arg-dropdown {
-  height: 30px;
-  -webkit-transition: 1s;
-  transition: 1s;
-  color: white;
-}
-
->>>>>>> bab253f326f92542b820e7fa7b2dc17dbe4756a0
 .miniHeader .container .arg-dropdown.show {
   -webkit-transition: 1s;
   transition: 1s;
@@ -325,11 +313,8 @@ body {
 }
 
 .gyramanSteps .conztainer .gyramanLeft .contentIcons {
-<<<<<<< HEAD
   margin-top: 55px;
-=======
   margin-top: 105px;
->>>>>>> bab253f326f92542b820e7fa7b2dc17dbe4756a0
   font-size: 48px;
   -webkit-transition: 1s;
   transition: 1s;
