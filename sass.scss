@@ -294,6 +294,11 @@ $black : black;
                     visibility: hidden;
                     transform: translateY(-100px);
                     
+                    & .contentIcons {
+                        font-size: 48px;
+                        transition: 1s;
+                    }
+                    
                     &.show {
                         transform: translateY(0px);
                         opacity: 1;
