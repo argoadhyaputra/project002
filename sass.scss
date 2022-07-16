@@ -287,6 +287,10 @@ $black : black;
             }
             
             & .arg-dropdown {
+                & .contentIcons {
+                        font-size: 48px;
+                        transition: 1s;
+                    }
                 & .arg-dropdown-menu {
                     height: 0;
                     transition: all 1s ease;
@@ -294,10 +298,7 @@ $black : black;
                     visibility: hidden;
                     transform: translateY(-100px);
                     
-                    & .contentIcons {
-                        font-size: 48px;
-                        transition: 1s;
-                    }
+                    
                     
                     &.show {
                         transform: translateY(0px);
